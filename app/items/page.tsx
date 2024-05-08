@@ -12,8 +12,8 @@ export default async function Page() {
 
       <form action={async (data: FormData) => {
         "use server";
-
-        const keyword = data.get("query") as string;
+        let keyword = data.get("query") as string;
+        keyword = keyword.replaceAll("　", " ");
         redirect(`/search?q=${encodeURIComponent(keyword)}`);
       }} className="flex gap-2 mb-6">
         <Input name="query" className="flex-1" type="text" autoComplete="off" />

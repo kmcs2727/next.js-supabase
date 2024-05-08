@@ -1,4 +1,4 @@
-import { signIn, signOut } from '@/actions/auth';
+import { signIn } from '@/actions/auth';
 import { Button } from '@/components/ui/button';
 import React from 'react';
 import { currentUser } from '../data/auth';
